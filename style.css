@@ -1,0 +1,48 @@
+* {
+  margin: auto;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Noto Sans Japanese", sans-serif;
+}
+
+.header {
+  width: 931px;
+  height: 128px;
+  margin-top: 30px;
+}
+.header__notification {
+  display: flex;
+  justify-content: space-between;
+}
+.header__notification__left {
+  margin-left: 0px;
+}
+.header__notification__left__home img {
+  width: 17.87px;
+  height: 15.89px;
+}
+.header__notification__left__home__text {
+  font-size: 14px;
+}
+.header__notification__right {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0px;
+}
+.header__notification__right__share__text {
+  margin-top: 29px;
+  font-size: 14px;
+}
+.header__notification__right__share__icon {
+  width: 14px;
+  height: 14px;
+}
+.header__notification__right__email__text {
+  font-size: 14px;
+}
+.header__notification__right__email__icon {
+  width: 20px;
+  height: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
