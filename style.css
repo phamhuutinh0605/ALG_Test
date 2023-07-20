@@ -1,15 +1,75 @@
-* {
-  margin: auto;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: "Noto Sans Japanese", sans-serif;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.7;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+body .menu__left {
+  width: 220px;
+}
+body .conntainer {
+  width: calc(100% - 269px);
+}
 body .header {
   max-width: 931px;
   height: 128px;
   margin-top: 30px;
-  margin-left: 630px;
   color: #7B7B7B;
 }
 body .header__notification {
@@ -19,6 +79,11 @@ body .header__notification {
 body .header__notification__left {
   margin-left: 0px;
 }
+body .header__notification__left__home {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
 body .header__notification__left__home img {
   width: 17.87px;
   height: 15.89px;
@@ -27,18 +92,28 @@ body .header__notification__left__home__text {
   font-size: 14px;
 }
 body .header__notification__right {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-right: 0px;
 }
+body .header__notification__right__share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 body .header__notification__right__share__text {
-  margin-top: 29px;
   font-size: 14px;
 }
 body .header__notification__right__share__icon {
   margin-left: 10px;
   width: 14px;
   height: 14px;
+}
+body .header__notification__right__email {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 body .header__notification__right__email__text {
   font-size: 14px;
@@ -49,9 +124,9 @@ body .header__notification__right__email__icon {
   height: 15px;
 }
 body .header__search {
-  margin-top: 22px;
+  margin-top: 12px;
+  height: 90px;
   display: flex;
-  justify-content: space-between;
   background-color: #EAF1F7;
   border-radius: 50px;
 }
@@ -67,13 +142,15 @@ body .header__search__question__text {
 }
 body .header__search__input {
   color: #7B7B7B;
-  margin-left: 0px;
+  margin-left: -13px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 body .header__search__input img {
   filter: sepia(100%) hue-rotate(0deg) saturate(0%);
   position: absolute;
-  top: 16px;
+  top: 36px;
   left: 20px;
   width: 18.31px;
   height: 18.31px;
@@ -81,23 +158,24 @@ body .header__search__input img {
 body .header__search__input input {
   border-radius: 40px;
   border: 1px solid #7B7B7B;
-  padding: 15px 48px;
-  width: 426px;
-  height: 50px;
+  width: 376px;
+  height: 46px;
+  padding-left: 46px;
 }
 body .header__search__input button {
   color: #fff;
   background-color: #42A7C2;
-  padding: 15px 31px;
+  padding: 16px 34px;
+  margin-left: 13px;
   border: none;
   border-radius: 10px;
 }
 body main .slide {
-  margin: 48.5px 630px 23px;
-  max-width: 640px;
-  height: 148.61px;
+  margin: 65px 1px 23px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  height: 137.4px;
 }
 body main .slide__image img {
   width: 189.68px;
@@ -106,155 +184,81 @@ body main .slide__image img {
 body main .slide__text p {
   color: #42A7C2;
   font-size: 26px;
-  margin-left: 20.3px;
+  margin-left: 21.3px;
 }
 body main .slide__text span {
-  margin: 13px 23.3px;
-  font-size: 16px;
-}
-body main .slide-1 {
-  margin: 80px 630px 23px;
-  display: flex;
-  justify-content: space-between;
-  max-width: 479px;
-  height: 137.4px;
-}
-body main .slide-1__image img {
-  width: 122.09px;
-  height: 137.4px;
-}
-body main .slide-1__text p {
-  color: #42A7C2;
-  font-size: 26px;
-  margin-left: 21.3px;
-}
-body main .slide-1__text span {
-  margin: 13px 20.9px;
-  font-size: 16px;
-}
-body main .slide-2 {
-  margin: 80px 630px 23px;
-  display: flex;
-  justify-content: space-between;
-  max-width: 479px;
-  height: 137.4px;
-}
-body main .slide-2__image img {
-  width: 122.09px;
-  height: 137.4px;
-}
-body main .slide-2__text p {
-  color: #42A7C2;
-  font-size: 26px;
-  margin-left: 21.3px;
-}
-body main .slide-2__text span {
   margin: 13px 20.9px;
   font-size: 16px;
 }
 body main .feature {
   color: #42A7C2;
   font-size: 18px;
-  margin-left: 630px;
-  margin-top: 30px;
-  max-width: 930px;
-  height: 305px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  margin-top: 24px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 body main .feature__item {
-  width: 300px;
-  height: 145px;
+  width: 31.25%;
   border: 1px solid #42A7C2;
-  padding: 22px 48px 27px;
-  border-radius: 10px;
-  display: grid;
+  padding: 15px 48px;
+  border-radius: 15px;
   text-align: center;
+  line-height: 1.6;
+  margin-right: 10px;
 }
-body main .feature__item img {
-  margin-bottom: 15px;
+body main .feature__item:last-child {
+  margin-right: 0;
+}
+body main .feature__item figure {
+  margin: 6px;
+}
+body main .feature__item svg {
+  display: block;
 }
 body main .charts {
   color: #42A7C2;
-  margin: 0px 630px;
   max-width: 930px;
   height: 305px;
 }
 body main .charts__title p {
+  margin: 22px 0 20px;
   font-size: 20px;
 }
 body main .charts__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  display: flex;
+  justify-content: flex-start;
+}
+body main .charts__list .item__content {
+  margin: 34px auto 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 body main .charts__list__item {
+  width: 25%;
   background-color: #EAF1F7;
-  padding: 20px 40px;
   border-radius: 10px;
   text-align: center;
+  margin-right: 17px;
+}
+body main .charts__list__item :last-child {
+  margin-right: 0;
+}
+body main .charts__list__item figure {
+  max-width: 134.97px;
+  margin: 0 10px 24px 10px;
+  min-height: 60px;
 }
 body main .charts__list__item img {
-  width: 134.97px;
-  height: 60.8px;
+  width: 100%;
+  height: auto;
 }
 body main .charts__list__item span {
-  display: grid;
-}
-body main .charts-1 {
-  color: #42A7C2;
-  margin: 0px 630px;
-  max-width: 930px;
-  height: 305px;
-}
-body main .charts-1__title p {
-  font-size: 20px;
-}
-body main .charts-1__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-body main .charts-1__list__item {
-  background-color: #EAF1F7;
-  padding: 20px 40px;
-  border-radius: 10px;
-  text-align: center;
-}
-body main .charts-1__list__item img {
-  width: 134.97px;
-  height: 60.8px;
-}
-body main .charts-1__list__item span {
-  display: grid;
-}
-body main .charts-2 {
-  color: #42A7C2;
-  margin: 0px 630px;
-  max-width: 930px;
-  height: 305px;
-}
-body main .charts-2__title p {
-  font-size: 20px;
-}
-body main .charts-2__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-body main .charts-2__list__item {
-  background-color: #EAF1F7;
-  padding: 20px 40px;
-  border-radius: 10px;
-  text-align: center;
-}
-body main .charts-2__list__item img {
-  width: 134.97px;
-  height: 60.8px;
-}
-body main .charts-2__list__item span {
-  display: grid;
+  width: 100%;
 }
 body main .role {
-  margin-left: 630px;
   max-width: 930.5px;
   color: #42A7C2;
   display: grid;
